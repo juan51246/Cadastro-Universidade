@@ -1,0 +1,99 @@
+body {
+    background-image: url('background.png'); /* Certifique-se de que o caminho está correto */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.2s ease-in; /* Transição de 0,2s */
+}
+body.visible {
+    opacity: 1; /* Torna visível */
+}
+.header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo do cabeçalho com transparência */
+    backdrop-filter: blur(10px); /* Efeito de blur */
+    width: 100%; /* Largura total */
+    padding: 15px 0; /* Espaçamento superior e inferior */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Alinha ao topo */
+    display: flex; /* Alinha os itens em linha */
+    justify-content: space-between; /* Distribui os itens uniformemente */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+.header a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px 20px; /* Espaçamento em torno dos links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: background-color 0.3s; /* Efeito de transição */
+    border-radius: 10px;
+}
+.header a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fundo do quadrado com transparência mais clara */
+    padding: 50px;
+    /* Ajustado para 40px */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    text-align: center;
+    /* Centraliza o texto */
+    backdrop-filter: blur(10px);
+    /* Reduzido o blur */
+    width: 300px;
+    /* Largura do container */
+    margin-top: 80px; /* Espaço abaixo do cabeçalho fixo */
+}
+h1 {
+    margin-bottom: 40px; /* Aumentado para 40px */
+    font-size: 36px; /* Aumentado para 36px */
+}
+.input-group {
+    margin-bottom: 20px; /* Espaço entre os grupos de entrada */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+label {
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 5px; /* Espaço abaixo do label */
+}
+input[type="text"], input[type="password"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaço interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #fff; /* Fundo branco para os campos de entrada */
+    color: #000; /* Cor do texto */
+}
+.button {
+    background-color: #db9584;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    /* Ajustado para 15px x 30px */
+    font-size: 20px;
+    /* Ajustado para 20px */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    flex: 1;
+    /* Faz os botões terem o mesmo tamanho */
+    text-align: center;
+    /* Centraliza o texto */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+}
+
+.button:hover {
+    background-color: #f3c4b8;
+    box-shadow: 0 0 20px neon;
+}

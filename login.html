@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="resouces/login.css">
+</head>
+<body>
+    <div class="header">
+        <a href="https://github.com/juan51246">Desenvolvedor</a>
+        <a href="cadastro.html">Home</a>
+        <a href="login.html">Fazer Login</a>
+    </div>
+    <div class="container">
+        <h1>Login</h1>
+        <div class="input-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+        </div>
+        <div class="input-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+        <button class="button" onclick="alert('Login realizado!')">Entrar</button>
+    </div>
+    <script>
+        // Após o carregamento da página, adiciona a classe 'visible' ao body
+        window.onload = function() {
+            document.body.classList.add('visible');
+        };
+    </script>
+</body>
+</html>

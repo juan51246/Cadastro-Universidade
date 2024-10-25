@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Disciplinas</title>
+    <link rel="stylesheet" href="resouces/page.css">
+</head>
+<body>
+    <div class="header">
+        <a href="https://github.com/juan51246">Developer</a>
+        <a href="cadastro.html">Home</a>
+        <a href="login.html">Fazer Login</a>
+    </div>
+    <div class="container">
+        <h1>Cadastro de Disciplinas</h1>
+        <div class="input-group">
+            <label for="disciplina">Disciplina:</label>
+            <input type="text" id="disciplina" placeholder="Digite o nome da disciplina">
+        </div>
+        <div class="input-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" placeholder="Digite a descrição">
+        </div>
+        <div class="input-group">
+            <label for="sigla">Sigla:</label>
+            
+            <input type="text" id="sigla" placeholder="Digite a sigla">
+        </div>
+        <div class="input-group">
+            <label for="turno">Turno:</label>
+            <input type="text" id="turno" placeholder="Digite o turno">
+        </div>
+        <button class="button" onclick="alert('Cadastro realizado!')">Cadastrar</button>
+    </div>
+    <script>
+        // Após o carregamento da página, adiciona a classe 'visible' ao body
+        window.onload = function() {
+            document.body.classList.add('visible');
+        };
+    </script>
+</body>
+</html>
