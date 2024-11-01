@@ -1,99 +1,138 @@
+/* Estilo do corpo da página */
 body {
     background-image: url('background.png'); /* Certifique-se de que o caminho está correto */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
+    color: white; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte utilizada */
+    display: flex; /* Usar Flexbox para alinhar itens */
     flex-direction: column; /* Alinha o conteúdo verticalmente */
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura da tela */
+    margin: 0; /* Remove margens padrão */
     opacity: 0; /* Começa invisível */
-    transition: opacity 0.2s ease-in; /* Transição de 0,2s */
+    transition: opacity 0.2s ease-in; /* Transição de opacidade */
 }
+
+/* Torna o corpo visível */
 body.visible {
     opacity: 1; /* Torna visível */
 }
+
+/* Estilo do cabeçalho */
 .header {
     background-color: rgba(0, 0, 0, 0.5); /* Fundo do cabeçalho com transparência */
-    backdrop-filter: blur(10px); /* Efeito de blur */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
     width: 100%; /* Largura total */
     padding: 15px 0; /* Espaçamento superior e inferior */
     position: fixed; /* Fixa o cabeçalho no topo */
     top: 0; /* Alinha ao topo */
-    display: flex; /* Alinha os itens em linha */
-    justify-content: space-between; /* Distribui os itens uniformemente */
+    display: flex; /* Usar Flexbox para alinhar itens */
+    justify-content: space-between; /* Distribui itens uniformemente */
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
+
+/* Estilo dos links no cabeçalho */
 .header a {
     color: white; /* Cor do texto dos links */
     text-decoration: none; /* Remove sublinhado dos links */
     padding: 10px 20px; /* Espaçamento em torno dos links */
     font-size: 18px; /* Tamanho da fonte dos links */
-    transition: background-color 0.3s; /* Efeito de transição */
-    border-radius: 10px;
+    transition: background-color 0.3s; /* Efeito de transição ao passar o mouse */
+    border-radius: 10px; /* Bordas arredondadas */
 }
+
+/* Efeito ao passar o mouse sobre os links */
 .header a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito de fundo ao passar o mouse */
 }
+
+/* Estilo do container principal */
 .container {
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Fundo do quadrado com transparência mais clara */
-    padding: 50px;
-    /* Ajustado para 40px */
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    /* Sombra */
-    text-align: center;
-    /* Centraliza o texto */
-    backdrop-filter: blur(10px);
-    /* Reduzido o blur */
-    width: 300px;
-    /* Largura do container */
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo do quadrado com transparência */
+    padding: 40px; /* Ajustado para 40px */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    text-align: center; /* Centraliza o texto */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    width: 90%; /* Largura do container em porcentagem */
+    max-width: 400px; /* Largura máxima do container */
     margin-top: 80px; /* Espaço abaixo do cabeçalho fixo */
 }
+
+/* Estilo do título principal */
 h1 {
-    margin-bottom: 40px; /* Aumentado para 40px */
-    font-size: 36px; /* Aumentado para 36px */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    font-size: 36px; /* Tamanho da fonte do título */
 }
+
+/* Estilo dos grupos de entrada */
 .input-group {
     margin-bottom: 20px; /* Espaço entre os grupos de entrada */
     text-align: left; /* Alinha o texto à esquerda */
+    font-size: medium;
 }
+
+/* Estilo dos rótulos (labels) */
 label {
     display: block; /* Cada label em uma nova linha */
     margin-bottom: 5px; /* Espaço abaixo do label */
 }
-input[type="text"], input[type="password"] {
+
+/* Estilo dos campos de entrada de texto e senha */
+input[type="text"], input[type="password"], select {
     width: 100%; /* Largura total */
-    padding: 10px; /* Espaço interno */
-    border: 1px solid #ccc; /* Borda */
+    padding: 10px; /* Espaço interno igual dos dois lados */
+    border: 1px solid #ccc; /* Borda padrão */
     border-radius: 5px; /* Bordas arredondadas */
     background-color: #fff; /* Fundo branco para os campos de entrada */
     color: #000; /* Cor do texto */
-}
-.button {
-    background-color: #db9584;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    /* Ajustado para 15px x 30px */
-    font-size: 20px;
-    /* Ajustado para 20px */
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    flex: 1;
-    /* Faz os botões terem o mesmo tamanho */
-    text-align: center;
-    /* Centraliza o texto */
-    text-decoration: none;
-    /* Remove o sublinhado do link */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
 }
 
+/* Estilo dos botões */
+.button {
+    background-color: #db9584; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 15px 30px; /* Espaço interno do botão */
+    font-size: 20px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Efeitos de transição */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    width: 100%; /* Largura total do botão */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
 .button:hover {
-    background-color: #f3c4b8;
-    box-shadow: 0 0 20px neon;
+    background-color: #f3c4b8; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra ao passar o mouse */
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 0; /* Menos padding no cabeçalho em telas pequenas */
+    }
+
+    .container {
+        padding: 20px; /* Ajusta padding para telas menores */
+        margin-top: 60px; /* Espaço abaixo do cabeçalho em telas pequenas */
+    }
+
+    h1 {
+        font-size: 28px; /* Tamanho da fonte menor em dispositivos móveis */
+        margin-bottom: 20px; /* Ajustado para 20px */
+    }
+
+    .input-group {
+        margin-bottom: 15px; /* Ajustado para 15px */
+    }
+
+    .button {
+        padding: 12px; /* Ajustado para um padding menor */
+        font-size: 16px; /* Tamanho da fonte menor para botões */
+    }
 }

@@ -29,15 +29,16 @@
         </div>
         <div class="input-group">
             <label for="turno">Turno:</label>
-            <input type="text" id="turno" placeholder="Digite o turno">
+            <select id="opcoes" name="opcoes" class="input-group">
+                <option value="default">Escolha um Turno</option>
+                <option value="opcao1">Matutino</option>
+                <option value="opcao2">Vespertino</option>
+                <option value="opcao3">Noturno</option>
+            </select>
+            
         </div>
         <button class="button" onclick="alert('Cadastro realizado!')">Cadastrar</button>
     </div>
-    <script>
-        // Após o carregamento da página, adiciona a classe 'visible' ao body
-        window.onload = function() {
-            document.body.classList.add('visible');
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -28,15 +28,10 @@
         </div>
         <div class="input-group">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" placeholder="Digite o telefone">
+            <input type="tel" id="telefone" placeholder="Digite o telefone" maxlength="15" oninput="formatarTelefone()">
         </div>
         <button class="button" onclick="alert('Cadastro realizado!')">Cadastrar</button>
     </div>
-    <script>
-        // Após o carregamento da página, adiciona a classe 'visible' ao body
-        window.onload = function() {
-            document.body.classList.add('visible');
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
